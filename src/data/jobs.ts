@@ -5,6 +5,7 @@ export type Job = {
   title: string;
   location: string;
   type: string;
+  website: string;
   experience: string;
   description: string;
 };
@@ -14,13 +15,14 @@ export const jobs = {
     {
       id: 1,
       company: 'Zeta',
-      logo: '/logos/zeta.jpeg', // Example logo path (store logos in /public/logos/)
+      logo: '/logos/zeta.jpeg',
       title: 'Associate Product Manager',
       post: '09 Mar',
       location: 'Bengaluru',
       type: 'Full-time',
       experience: '0-2 years',
-      description: 'Zeta is hiring an Associate Product Manager to help build their next-gen platform.',
+      website: 'https://www.zeta.tech/us/',
+      description: 'Zeta is hiring an Associate Product Manager...',
     },
     {
       id: 2,
@@ -31,17 +33,19 @@ export const jobs = {
       location: 'Remote',
       type: 'Full-time',
       experience: '2-5 years',
+      website: 'https://www.zeta.tech/us/',
       description: 'Flipkart is looking for an experienced Product Manager to drive innovation.',
     },
     {
       id: 3,
       company: 'Volvo Cars',
       logo: '/logos/volvocars.jpeg',
-      title: 'Associate Product Manager I',
+      title: 'Associate Product Manager',
       post: '09 Mar',
       location: 'Bengaluru',
       type: 'Full-time',
       experience: '0-2 years',
+      website: 'https://www.zeta.tech/us/',
       description: 'Zeta is hiring an Associate Product Manager to help build their next-gen platform.',
     },
     {
@@ -53,6 +57,7 @@ export const jobs = {
       location: 'Bengaluru',
       type: 'Full-time',
       experience: '2-5 years',
+      website: 'https://www.zeta.tech/us/',
       description: 'Flipkart is looking for an experienced Product Manager to drive innovation.',
     },
     {
@@ -64,6 +69,7 @@ export const jobs = {
       location: 'Mumbai',
       type: 'Intership',
       experience: '0-2 years',
+      website: 'https://www.zeta.tech/us/',
       description: 'Zeta is hiring an Associate Product Manager to help build their next-gen platform.',
     },
     {
@@ -75,6 +81,7 @@ export const jobs = {
       location: 'Bengaluru',
       type: 'Full-time',
       experience: '2-5 years',
+      website: 'https://www.zeta.tech/us/',
       description: 'Flipkart is looking for an experienced Product Manager to drive innovation.',
     },
     {
@@ -86,6 +93,7 @@ export const jobs = {
       location: 'New Delhi',
       type: 'Full-time',
       experience: '0-2 years',
+      website: 'https://www.zeta.tech/us/',
       description: 'Zeta is hiring an Associate Product Manager to help build their next-gen platform.',
     },
     {
@@ -97,6 +105,7 @@ export const jobs = {
       location: 'Gurugram,haryana',
       type: 'Full-time',
       experience: '2-5 years',
+      website: 'https://www.zeta.tech/us/',
       description: 'Flipkart is looking for an experienced Product Manager to drive innovation.',
     },
     {
@@ -108,6 +117,7 @@ export const jobs = {
       location: 'Mumbai',
       type: 'Pune',
       experience: '0-2 years',
+      website: 'https://www.zeta.tech/us/',
       description: 'Zeta is hiring an Associate Product Manager to help build their next-gen platform.',
     },
     {
@@ -119,6 +129,7 @@ export const jobs = {
       location: 'Bengaluru',
       type: 'Full-time',
       experience: '2-5 years',
+      website: 'https://www.zeta.tech/us/',
       description: 'Flipkart is looking for an experienced Product Manager to drive innovation.',
     },
     {
@@ -130,6 +141,7 @@ export const jobs = {
       location: 'Mumabai',
       type: 'Full-time',
       experience: '0-2 years',
+      website: 'https://www.zeta.tech/us/',
       description: 'Zeta is hiring an Associate Product Manager to help build their next-gen platform.',
     },
     {
@@ -141,6 +153,7 @@ export const jobs = {
       location: 'Gurugram',
       type: 'Full-time',
       experience: '2-5 years',
+      website: 'https://www.zeta.tech/us/',
       description: 'Flipkart is looking for an experienced Product Manager to drive innovation.',
     }
   ],
@@ -155,7 +168,7 @@ export const jobs = {
 
   engineering: [
     {
-      id: 1,
+      id: 13,
       company: 'UBS',
       logo: '/logos/ubs_logo.jpeg',
       title: 'Fullstack Engineer(Java, React) ',
@@ -163,10 +176,11 @@ export const jobs = {
       location: 'Pune',
       type: 'Full-time',
       experience: '3-6 years',
+      website: 'https://www.zeta.tech/us/',
       description: 'Google is hiring a Software Engineer to develop cutting-edge solutions.',
     },
     {
-      id: 2,
+      id: 14,
       company: 'Barclays',
       logo: '/logos/barclays.jpeg',
       title: 'Full Stack Developer',
@@ -174,10 +188,11 @@ export const jobs = {
       location: 'Pune',
       type: 'Full-time',
       experience: '2-5 years',
+      website: 'https://www.zeta.tech/us/',
       description: 'Amazon is looking for a Backend Engineer to work on cloud computing solutions.',
     },
     {
-      id: 3,
+      id: 15,
       company: 'Goldman Sachs',
       logo: '/logos/goldman_sachs.jpeg',
       title: 'Software Engineering - Associate',
@@ -185,10 +200,11 @@ export const jobs = {
       location: 'Bengaluru',
       type: 'Full-time',
       experience: '3-6 years',
+      website: 'https://www.zeta.tech/us/',
       description: 'Google is hiring a Software Engineer to develop cutting-edge solutions.',
     },
     {
-      id: 4,
+      id: 16,
       company: 'Optum',
       logo: '/logos/optum.jpeg',
       title: 'Software Engineer',
@@ -196,10 +212,11 @@ export const jobs = {
       location: 'Noida',
       type: 'Full-time',
       experience: '2-5 years',
+      website: 'https://www.zeta.tech/us/',
       description: 'Amazon is looking for a Backend Engineer to work on cloud computing solutions.',
     },
     {
-      id: 5,
+      id: 17,
       company: 'BlackRock',
       logo: '/logos/blackrock.jpeg',
       title: 'Java Backend Engineer',
@@ -207,10 +224,11 @@ export const jobs = {
       location: 'Gurgaon',
       type: 'Full-time',
       experience: '3-6 years',
+      website: 'https://www.zeta.tech/us/',
       description: 'Google is hiring a Software Engineer to develop cutting-edge solutions.',
     },
     {
-      id: 6,
+      id: 18,
       company: 'Virtusa',
       logo: '/logos/virtusa.jpeg',
       title: 'Node Developer',
@@ -218,10 +236,11 @@ export const jobs = {
       location: 'Gurgaon',
       type: 'Full-time',
       experience: '2-5 years',
+      website: 'https://www.zeta.tech/us/',
       description: 'Amazon is looking for a Backend Engineer to work on cloud computing solutions.',
     },
     {
-      id: 7,
+      id: 19,
       company: 'American Express',
       logo: '/logos/american.jpeg',
       title: 'Java - Engineer',
@@ -229,10 +248,11 @@ export const jobs = {
       location: 'Bengaluru',
       type: 'Full-time',
       experience: '3-6 years',
+      website: 'https://www.zeta.tech/us/',
       description: 'Google is hiring a Software Engineer to develop cutting-edge solutions.',
     },
     {
-      id: 8,
+      id: 20,
       company: 'Google',
       logo: '/logos/google.jpeg',
       title: 'Software Engineer',
@@ -240,10 +260,11 @@ export const jobs = {
       location: 'Bengaluru',
       type: 'Full-time',
       experience: '2-5 years',
+      website: 'https://www.zeta.tech/us/',
       description: 'Amazon is looking for a Backend Engineer to work on cloud computing solutions.',
     },
     {
-      id: 9,
+      id: 21,
       company: 'LSEG',
       logo: '/logos/london_stock.jpeg',
       title: 'Software Engineer',
@@ -251,10 +272,11 @@ export const jobs = {
       location: 'Hyderabad',
       type: 'Full-time',
       experience: '3-6 years',
+      website: 'https://www.zeta.tech/us/',
       description: 'Google is hiring a Software Engineer to develop cutting-edge solutions.',
     },
     {
-      id: 10,
+      id: 22,
       company: 'Qualys',
       logo: '/logos/qualys.jpeg',
       title: 'Software Engineer',
@@ -262,10 +284,11 @@ export const jobs = {
       location: 'Pune',
       type: 'Full-time',
       experience: '2-5 years',
+      website: 'https://www.zeta.tech/us/',
       description: 'Amazon is looking for a Backend Engineer to work on cloud computing solutions.',
     },
     {
-      id: 11,
+      id: 23,
       company: 'Microsoft',
       logo: '/logos/microsoft.jpeg',
       title: 'Software Engineer',
@@ -273,10 +296,11 @@ export const jobs = {
       location: 'Hyderabad',
       type: 'Full-time',
       experience: '3-6 years',
+      website: 'https://www.zeta.tech/us/',
       description: 'Google is hiring a Software Engineer to develop cutting-edge solutions.',
     },
     {
-      id: 12,
+      id: 24,
       company: 'McKinsey & Company',
       logo: '/logos/mckinsey.jpeg',
       title: 'Senior Software Engineer',
@@ -284,6 +308,7 @@ export const jobs = {
       location: 'Gurugram',
       type: 'Full-time',
       experience: '2-5 years',
+      website: 'https://www.zeta.tech/us/',
       description: 'Amazon is looking for a Backend Engineer to work on cloud computing solutions.',
     }
   ]
