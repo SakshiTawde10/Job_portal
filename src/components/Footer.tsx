@@ -14,7 +14,7 @@ export default function Footer() {
               <span className="text-xl font-semibold ml-2">Airtribe</span>
             </div>
             <p className="text-sm text-gray-300">
-              Transforming the way individuals learn and network for professional excellence!
+              Transforming the way individuals learn and network for professional
             </p>
             {/* Social Icons */}
             <div className="flex justify-center md:justify-start gap-4 mt-4">
