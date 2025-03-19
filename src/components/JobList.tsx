@@ -1,4 +1,4 @@
-
+'use client'
 import { useState } from "react";
 import Link from "next/link";
 import { jobs } from "../data/jobs";
@@ -31,7 +31,7 @@ export default function JobList() {
     const secondBatchJobs = filteredJobs.slice(jobsPerRow * numRows, jobsPerRow * (numRows + 1));
 
     return (
-        <div className="max-w-full mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="max-w-full ">
             {/* Title Bar */}
             <h1 className="text-5xl font-bold text-center bg-[#251C3B] text-white pt-15 pb-5">
                 {category === "product" ? "Product Manager Jobs" : "Software Developer Jobs"}
@@ -118,7 +118,7 @@ export default function JobList() {
             </div>
 
             {/* Filters & Post Job Button */}
-            <div className="max-w-7xl mx-auto flex flex-col sm:flex-row items-center justify-between mt-4 space-y-4 sm:space-y-0">
+            <div className="max-w-6xl mx-auto flex flex-col sm:flex-row items-center justify-between mt-4 space-y-4 sm:space-y-0">
                 <h1 className="text-2xl font-bold">{filteredJobs.length} Jobs</h1>
 
                 <div className="flex flex-col sm:flex-row items-center gap-4">
@@ -223,109 +223,4 @@ export default function JobList() {
         </div>
     );
 }
-
-
-
-// import { useState } from "react";
-// import Link from "next/link";
-// import { Job, jobs } from "../data/jobs";
-// import { Search, Bell } from "lucide-react";
-// import { CiLocationOn, CiClock2 } from "react-icons/ci";
-// import ProductManagerBanner from "./ProductManagerBanner";
-// import Footer from "./Footer";
-
-// type Category = "product" | "engineering";
-
-// export default function JobList() {
-//     const [category, setCategory] = useState<Category>("product");
-//     const [searchTerm, setSearchTerm] = useState("");
-//     const [locationFilter, setLocationFilter] = useState("");
-//     const [experienceFilter, setExperienceFilter] = useState("");
-//     const [isModalOpen, setIsModalOpen] = useState(false);
-
-//     const filteredJobs = jobs[category].filter(
-//         (job) =>
-//             job.title.toLowerCase().includes(searchTerm.toLowerCase()) &&
-//             (locationFilter === "" || job.location.toLowerCase().includes(locationFilter.toLowerCase())) &&
-//             (experienceFilter === "" || job.experience === experienceFilter)
-//     );
-
-//     return (
-//         <div className="max-w-full mx-auto px-4 sm:px-6 lg:px-8">
-//             <h1 className="text-5xl font-bold text-center bg-[#251C3B] text-white pt-15 pb-5">
-//                 {category === "product" ? "Product Manager Jobs" : "Software Developer Jobs"}
-//             </h1>
-//             <p className="text-l text-center bg-[#251C3B] text-white pb-10">
-//                 An exclusive collection of curated job opportunities for you.
-//             </p>
-
-//             <div className="relative my-4 max-w-xl mx-auto">
-//                 <Search className="absolute left-4 top-4 text-black-500" size={22} />
-//                 <input
-//                     type="text"
-//                     placeholder="Search by role, location, experience..."
-//                     className="shadow-lg pl-12 pr-4 py-4 w-full bg-white rounded-md focus:ring-1"
-//                     value={searchTerm}
-//                     onChange={(e) => setSearchTerm(e.target.value)}
-//                 />
-//             </div>
-
-//             <div className="max-w-[15rem] mx-auto flex justify-center my-4 p-2 rounded-md border-2 border-gray-200">
-//                 <button onClick={() => setCategory("product")} className={`px-4 py-2 cursor-pointer ${category === "product" ? "bg-[#683FBE] text-white text-xl" : "bg-gray-100"}`}>
-//                     Product
-//                 </button>
-//                 <button onClick={() => setCategory("engineering")} className={`px-4 py-2 ml-2 cursor-pointer ${category === "engineering" ? "bg-[#683FBE] text-white text-xl" : "bg-gray-100"}`}>
-//                     Engineering
-//                 </button>
-//             </div>
-
-//             <div className="max-w-7xl mx-auto flex flex-col sm:flex-row items-center justify-between mt-4 space-y-4 sm:space-y-0">
-//                 <h1 className="text-2xl font-bold">{filteredJobs.length} Jobs</h1>
-//                 <div className="flex flex-col sm:flex-row items-center gap-4">
-//                     <select className="h-[40px] border border-gray-300 px-4 rounded text-gray-400 w-[180px]" value={experienceFilter} onChange={(e) => setExperienceFilter(e.target.value)}>
-//                         <option value="">Min Experience</option>
-//                         <option value="0-2 years">0-2 years</option>
-//                         <option value="2-5 years">2-5 years</option>
-//                         <option value="3-6 years">3-6 years</option>
-//                     </select>
-//                     <input type="text" placeholder="Filter by location..." className="h-[40px] border border-gray-300 px-4 rounded text-gray-600 w-[200px]" value={locationFilter} onChange={(e) => setLocationFilter(e.target.value)} />
-//                     <button className="h-[40px] bg-[#683FBE] text-white px-5 rounded font-medium cursor-pointer">Post a Job</button>
-//                 </div>
-//             </div>
-
-//             <div className="max-w-7xl mx-auto grid gap-4 mt-10 grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
-//                 {filteredJobs.map((job) => (
-//                     <Link key={job.id} href={`/job/${job.id}`} className="block">
-//                         <div className="rounded-lg border border-gray-200 p-4 shadow-md hover:shadow-lg cursor-pointer bg-white w-full">
-//                             <div className="flex items-center space-x-3">
-//                                 <img src={job.logo} alt={job.company} className="w-12 h-12 rounded-md" />
-//                                 <div>
-//                                     <h2 className="font-semibold">{job.company}</h2>
-//                                     <p className="text-sm text-gray-500">Posted on {job.post}</p>
-//                                 </div>
-//                             </div>
-//                             <h3 className="text-lg font-bold mt-3">{job.title}</h3>
-//                             <div className="mt-10 space-y-1 text-gray-600 text-sm">
-//                                 <div className="flex items-center space-x-2">
-//                                     <CiLocationOn className="text-gray-700" />
-//                                     <span>{job.location}</span>
-//                                 </div>
-//                                 <div className="flex items-center space-x-2 mt-2">
-//                                     <CiClock2 className="text-gray-700" />
-//                                     <span>{job.type}</span>
-//                                 </div>
-//                             </div>
-//                         </div>
-//                     </Link>
-//                 ))}
-//             </div>
-
-//             <div className="max-w-7xl mx-auto my-10 justify-center">
-//                 <ProductManagerBanner />
-//             </div>
-//             <Footer />
-//         </div>
-//     );
-// }
-
 
