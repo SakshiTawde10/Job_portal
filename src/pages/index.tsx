@@ -1,7 +1,16 @@
 // Folder: /pages/index.tsx
-import JobList from '../components/JobList';
-import "../app/globals.css";
 
-export default function Home() {
-  return <JobList />;
+import "../app/globals.css";
+import Nav from '../components/Nav';
+
+
+const HomePage = () => {
+  return (
+    <div className="overflow-hidden">
+      <Nav />
+      
+    </div>
+  )
 }
+
+export default HomePage
