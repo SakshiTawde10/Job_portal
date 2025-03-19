@@ -2,7 +2,7 @@ import Image from "next/image";
 
 const ProductManagerBanner = () => {
   return (
-    <div className="flex items-center justify-between bg-[#F5FAFF] p-5 rounded-lg shadow-sm">
+    <div className="w-full flex items-center justify-between bg-[#F5FAFF] p-5 rounded-lg shadow-sm">
       {/* Left - Person Illustration */}
       <div className="w-1/3">
         <Image 

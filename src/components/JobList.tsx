@@ -1,4 +1,4 @@
-
+'use client'
 import { useState } from "react";
 import Link from "next/link";
 import { jobs } from "../data/jobs";
@@ -31,7 +31,7 @@ export default function JobList() {
     const secondBatchJobs = filteredJobs.slice(jobsPerRow * numRows, jobsPerRow * (numRows + 1));
 
     return (
-        <div className="max-w-full mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="max-w-full ">
             {/* Title Bar */}
             <h1 className="text-5xl font-bold text-center bg-[#251C3B] text-white pt-15 pb-5">
                 {category === "product" ? "Product Manager Jobs" : "Software Developer Jobs"}
